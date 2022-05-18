@@ -50,6 +50,8 @@ function Footer()
 $pdf = new PDF();
 $pdf->AliasNbPages();
 $pdf->AddPage();
+
+//HEADER
 $pdf->SetFont('Helvetica','',9);
 $pdf->Image('img\log_cat.png',18,30,50);
 $pdf->Ln(30);
@@ -116,8 +118,44 @@ $pdf->setX(16);
 $pdf->Cell(95,8,'rrhh@catmedialatino.com',0,0,'L',0);
 $pdf->SetFillColor(39, 40, 92); 
 $pdf->Cell(2,8,' ',0,0,'L',1);
-// for($i=1;$i<=40;$i++)
-//     $pdf->Cell(0,10,utf8_decode('Imprimiendo línea número ').$i,0,1);
+
+
+//BODY
+$pdf->Ln(25);
+$pdf->setX(16);
+$pdf->SetTextColor(255, 255, 255);
+$pdf->SetFillColor(39, 40, 92);  
+$pdf->Cell(80,8,'Concepto',0,0,'L',1);
+$pdf->Cell(20,8,'Uds.',0,0,'R',1);
+$pdf->Cell(20,8,'Base Ud.',0,0,'R',1);
+$pdf->Cell(20,8,'Base Total',0,0,'R',1);
+$pdf->Cell(20,8,'% IVA',0,0,'R',1);
+$pdf->Cell(20,8,'IVA',0,1,'R',1);
+
+$pdf->SetTextColor(0, 0, 0); 
+$pdf->setX(16);
+$pdf->Cell(80,8,'Servicio Publicitario en pauta LinkedIn Canada (Marzo)',0,0,'L',0);
+$pdf->Cell(20,8,'1',0,0,'R',0);
+$pdf->Cell(20,8,'2.000,00 $',0,0,'R',0);
+$pdf->Cell(20,8,'2.000,00 $',0,0,'R',0);
+$pdf->Cell(20,8,'0%',0,0,'R',0);
+$pdf->Cell(20,8,'0,00 $',0,0,'R',0);
+
+
+//FOOTER
+$pdf->Ln(140);
+$pdf->setX(120);
+$pdf->SetTextColor(255, 255, 255);
+$pdf->SetFillColor(39, 40, 92);  
+$pdf->Cell(80,6,'Totales',1,1,'C',1);
+$pdf->SetTextColor(0, 0, 0);
+$pdf->setX(120);
+$pdf->Cell(80,6,'Total B.I.:      2.000,00 $',1,1,'C',0);
+$pdf->setX(120);
+$pdf->Cell(80,6,'TOTAL:      2.000,00 $',1,1,'C',0);
+$pdf->Ln(2);
+$pdf->Cell(100,6,utf8_decode('Las cantidades expresadas en este documento son en Dílares de los Estados Unidos de América.'),0,1,'L',0);
+$pdf->Cell(100,6,utf8_decode('* recuerde que este es un presupuesto y no reemplaza ningún tipo de factura o comprobante de pago.'),0,1,'L',0);
 $pdf->Output();
 ?>
 
