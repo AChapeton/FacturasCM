@@ -24,5 +24,36 @@
       <input type="submit" class="btn btn-primary btn-block" id="save_task" name="save_task" value="Crear Cliente"></input>
       </div>
     </form>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Dirección</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+
+          $query = "SELECT * FROM clientes";
+          $result_clients = mysqli_query($connection, $query);
+
+          while($row = mysqli_fetch_array($result_clients)){ ?>
+            <tr>
+              <td><?php echo $row['client_name'] ?></td>
+              <td><?php echo $row['client_address'] ?></td>
+              <td>
+                <a href="edit_client.php" class="btn btn-secondary">
+                  <i class="fas fa-marker"></i>
+                </a>
+                <a href="delete_client.php" class="btn btn-danger">
+                  <i class="far fa-trash-alt"></i>
+                </a>
+              </td>
+            </tr>
+          <?php } ?>
+      </tbody>
+    </table>
   </div>
   <?php include("includes/footer.php")?>
