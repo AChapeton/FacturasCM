@@ -21,7 +21,7 @@
         <textarea class="form-control" id="client_address" name="client_address" rows="3"></textarea>
       </div>
       <div class="col-auto">
-      <input type="submit" class="btn btn-primary btn-block" id="save_task" name="save_task" value="Crear Cliente"></input>
+      <input type="submit" class="btn btn-primary btn-block" id="save_client" name="save_client" value="Crear Cliente"></input>
       </div>
     </form>
 
