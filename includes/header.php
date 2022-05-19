@@ -19,6 +19,7 @@
           <a class="nav-link" href="http://localhost:8080/catmedia_facturas/presupuesto.php">Facturas</a>
           <a class="nav-link" href="http://localhost:8080/catmedia_facturas/presupuesto.php">Facturas externas</a>
           <a class="nav-link" href="http://localhost:8080/catmedia_facturas/presupuesto.php">Cotización</a>
+          <a class="nav-link" href="http://localhost:8080/catmedia_facturas/clients.php">Clientes</a>
         </div>
       </div>
     </div>
