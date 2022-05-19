@@ -1,6 +1,6 @@
-<?php include("db.php")?>
+<?php include("../db.php")?>
 
-<?php include("includes/header.php")?>
+<?php include("../includes/header.php")?>
   <div class="container-md">  
     <h1>Clientes</h1>
     
@@ -44,10 +44,10 @@
               <td><?php echo $row['client_name'] ?></td>
               <td><?php echo $row['client_address'] ?></td>
               <td>
-                <a href="edit_client.php" class="btn btn-secondary">
+                <a href="./edit_client.php?id=<?php echo $row['id'] ?>" class="btn btn-secondary">
                   <i class="fas fa-marker"></i>
                 </a>
-                <a href="delete_client.php" class="btn btn-danger">
+                <a href="./delete_client.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">
                   <i class="far fa-trash-alt"></i>
                 </a>
               </td>
@@ -56,4 +56,4 @@
       </tbody>
     </table>
   </div>
-  <?php include("includes/footer.php")?>
+  <?php include("../includes/footer.php")?>

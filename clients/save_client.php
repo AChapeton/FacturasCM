@@ -1,7 +1,7 @@
 <?php
 
 //Including connection
-include("db.php");
+include("../db.php");
 
 //Callind data
 if(isset($_POST['save_task'])){
