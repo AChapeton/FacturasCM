@@ -4,6 +4,13 @@
   <div class="container-md">  
     <h1>Clientes</h1>
     
+    <?php if(isset($_SESSION['message'])) { ?>
+      <div class="alert alert-<?= $_SESSION['message_type']; ?> alert-dismissible fade show" role="alert">
+        <?= $_SESSION['message']; ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <?php session_unset(); }?>
+
     <form name="reporte" action="save_client.php" method="post">
       <div class="mb-3">
         <label for="client_name" class="form-label">Nombre</label>

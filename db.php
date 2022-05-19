@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $connection = mysqli_connect(
   'localhost',
   'root',
@@ -6,7 +9,7 @@ $connection = mysqli_connect(
   'catmedia_facturas'
 );
 
-if(isset($connection)){
-  echo 'DB is connected';
-}
+// if(isset($connection)){
+//   echo 'DB is not connected';
+// }
 ?>
