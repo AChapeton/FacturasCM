@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CatMedia - Facturas</title>
-</head>
-<body>
+<?php include("db.php")?>
+
+<?php include("includes/header.php")?>
   <h1>Hello World!</h1>
   <a href="http://localhost:8080/catmedia_facturas/presupuesto.php">Presupuesto</a>
-</body>
-</html>
+<?php include("includes/footer.php")?>
