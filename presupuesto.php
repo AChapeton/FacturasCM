@@ -6,8 +6,19 @@
     
     <form name="reporte" action="cotizacion.php" method="post">
       <div class="mb-3">
-        <label for="client" class="form-label">Cliente</label>
-        <input type="text" class="form-control" id="client" name="client">
+        <label for="clients" class="form-label">Cliente</label>
+        <select name="clients" id="clients">
+          <option value="0">Seleccionar...</option>
+          <?php
+          
+            $query="SELECT * FROM clientes";
+            $result=mysqli_query($connection,$query);
+            while($clients = mysqli_fetch_array($result)){
+              echo '<option value="'.$clients['client_name'].'">'.$clients['client_name'].'</option>';
+            }
+          ?>
+        </select>
+        <!-- <input type="text" class="form-control" id="client" name="client"> -->
       </div>
       <div class="mb-3">
         <label for="service" class="form-label">Servicio</label>

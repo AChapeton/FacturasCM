@@ -73,7 +73,7 @@ $pdf->Cell(2,8,' ',0,0,'L',1);
 $pdf->setX(117);
 $pdf->SetFont('Helvetica','B',9);
 //$pdf->Cell(50,9,''.$_POST['client'],0,2,'L');
-$pdf->Cell(75,8,''.$_POST['client'],0,0,'L');
+$pdf->Cell(75,8,''.$_POST['clients'],0,0,'L');
 $pdf->SetFillColor(39, 40, 92); 
 $pdf->Cell(2,8,' ',0,0,'L',1);
 $pdf->SetFont('Helvetica','',9);
